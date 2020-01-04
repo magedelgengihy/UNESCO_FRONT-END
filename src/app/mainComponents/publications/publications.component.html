@@ -1,0 +1,57 @@
+
+<div class="header_Publications_container">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="home_content ">
+                    <div class="current_page"><span translate>Publications</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    
+    <div class="row" >
+        <!-- <h1 class="col-12 h1-responsive head-title">--Publications--</h1> -->
+        <div class="col-sm-12 col-md-4 col-xs-3 col-lg-3 " style="margin-bottom:20px" *ngFor="let publication of allPublications">
+            
+            <div class="card border-info h-100 ">
+                <div class="hovereffect ">
+                    <a>
+                        <img class="card-img-top img-resp" src="http://localhost:3000/photos/{{publication.image}}"
+                            alt="{{publication.nameEn}}">
+                    </a>
+                </div>
+                <div class="card-body card-hover ">
+                    <h4 class="card-title">{{publication.nameEn}}</h4>
+
+                    <p class="card-text">{{publication.descriptionShortEn}} </p>
+                    <a class="btn btn-info btn-round"
+                     (click)="goToPublicationDetails(publication)"
+                     routerLink="/publication-details" routerLinkActive="active" translate>Read More</a>
+
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{{publication.date}}</small>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!----------------------------------Pagination------------------------------------------>
+    <div class="container">
+        <ul class="pagination  justify-content-center" style="margin:20px 0">
+            <li class="page-item" *ngIf="previousState"><a class="page-link" (click)="goToPreviousPage()">Previous</a>
+            </li>
+            <li class="page-item" active><a class="page-link">{{page}} / {{numOfPages}}</a></li>
+            <li class="page-item" *ngIf="nextState"><a class="page-link" (click)="goToNextPage()">Next</a></li>
+        </ul>
+    </div>
+
+
+</div>

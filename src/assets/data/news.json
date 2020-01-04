@@ -1,0 +1,103 @@
+{
+  "news":[
+
+    {
+	"titel_en": "Unesco",
+	"titel_ar": "title1-ar",
+	"images" : "assets/img/unesco_logo_bw_en.png",
+	"date": "9 Jan 2018",
+	"file": "file 1",
+	"short_desc_en": "It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people.",
+	"short_desc_ar": "short-disc-ar-1",
+	"long_desc_en": "long-disc-en-1",
+	"long_desc_ar": "long-disc-ar-1",
+	"department_id": "department_id 1",
+	"subdepartment_ids" : [1],
+	"genre": "genre1",
+	"user_id": "user_id 1",
+        "id":1
+    },
+    {
+
+	"titel_en": "Training",
+	"titel_ar": "title2-ar",
+	"images" : "assets/img/342.jpg",
+	"date": "7 Jan 2018",
+	"file": "file 2",
+	"short_desc_en": "It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people.",
+	"short_desc_ar": "short-disc-ar-2",
+	"long_desc_en": "long-disc-en-2",
+	"long_desc_ar": "long-disc-ar-2",
+	"department_id": "department_id 2",
+	"subdepartment_ids" : [2],
+	"genre": "genre2",
+	"user_id": "user_id 2",
+        "id":2
+    },
+    {
+	"titel_en": "Study in Al Azhar University",
+	"titel_ar": "title3-ar",
+	"images" : "assets/img/logo.png",
+	"date": "6 Jan 2018",
+	"file": "file3",
+	"short_desc_en": "It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people.",
+	"short_desc_ar": "short-disc-ar-3",
+	"long_desc_en": "long-disc-en-3",
+	"long_desc_ar": "long-disc-ar-3",
+	"department_id": "department_id 3",
+	"subdepartment_ids" : [3],
+	"genre": "genre3",
+	"user_id": "user_id 3",
+        "id":3
+    },
+    {
+	"titel_en": "Unesco",
+	"titel_ar": "title4-ar",
+	"images" : "https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg",
+	"date": "15 Jan 2019",
+	"file": "file 4",
+	"short_desc_en": "It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people.",
+	"short_desc_ar": "short-disc-ar-4",
+	"long_desc_en": "long-disc-en-4",
+	"long_desc_ar": "long-disc-ar-4",
+	"department_id": "department_id 4",
+	"subdepartment_ids" : [4],
+	"genre": "genre4",
+	"user_id": "user_id 4",
+        "id":4
+   },
+   {
+	"titel_en": "Unesco",
+	"titel_ar": "title5-ar",
+	"images" : "https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-1.jpg",
+	"date": "15 Jan 2019",
+	"file": "file 5",
+	"short_desc_en": "It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people.",
+	"short_desc_ar": "short-disc-ar-5",
+	"long_desc_en": "long-disc-en-5",
+	"long_desc_ar": "long-disc-ar-5",
+	"department_id": "department_id 5",
+	"subdepartment_ids" : [5],
+	"genre": "genre5",
+	"user_id": "user_id 5",
+        "id":5
+   },
+   {
+	"titel_en": "Unesco",
+	"titel_ar": "title6-ar",
+	"images" : "https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg",
+	"date": "15 Jan 2019",
+	"file": "file 6",
+	"short_desc_en": "It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people.",
+	"short_desc_ar": "short-disc-ar-6",
+	"long_desc_en": "long-disc-en-6",
+	"long_desc_ar": "long-disc-ar-6",
+	"department_id": "department_id 6",
+	"subdepartment_ids" : [6],
+	"genre": "genre6",
+	"user_id": "user_id 6",
+        "id":6
+   }
+
+  ]
+}

@@ -1,0 +1,71 @@
+<section class="sections ">
+    <div class="container">
+        <br>
+        <div class="col-12 section-header text-center">
+            <h2 class="section-title" translate>News</h2>
+            <div class="line">
+                <span></span>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <!-----------------------------------------side bar------------------------------------->
+            <div class="col-md-3 list-group" id="leftCol">
+                <div class="list-group" id="sidebar" [ngClass]="classes">
+                    <button class="list-group-item list-group-item-action active list-color ">
+                        <span translate>Committee Departments</span>
+                    </button>
+                    <button class="list-group-item list-group-item-action" *ngFor="let deptData of deptData;"
+                        (click)="getNewsByDeptID(deptData._id)" (click)="putDeptNameInTitle(deptData.nameEn)">
+                        <span translate>{{deptData.nameEn}}</span>
+                    </button>
+                </div>
+            </div>
+
+            <!------------------------------------news--------------------------------------->
+            <div class="col-md-9">
+                <h4>
+                    <div class="alert alert-primary list-color" role="alert">
+                        <span translate>{{titleOfNews}}</span>
+                    </div>
+                </h4>
+
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let news of allNews" style="margin-bottom: 20px;">
+                        <div class="card border-info  h-100">
+                            <div class="hovereffect ">
+                                <a>
+                                    <img class="card-img-top img-resp" src="http://localhost:3000/photos/{{news.image}}"
+                                        alt="{{news.nameEn}}">
+                                </a>
+                            </div>
+                            <div class="card-body card-hover ">
+                                <h4 class="card-title">{{news.nameEn}}</h4>
+                                <p class="card-text">{{news.descriptionShortEn}} </p>
+                                <a class="btn btn-primary btn-round" (click)="goToNewsDetails(news)"
+                                    routerLink="/news-details" routerLinkActive="active" translate>Read More</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">{{news.date}}</small>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+
+                <!----------------------------------Pagination------------------------------------------>
+                <div *ngIf="showPagination" class="container">
+                    <ul class="pagination  justify-content-center" style="margin:20px 0">
+                        <li class="page-item" *ngIf="previousState"><a class="page-link"
+                                (click)="goToPreviousPage()" >Previous</a>
+                        </li>
+                        <li class="page-item" active><a class="page-link">{{page}} / {{numOfPages}}</a></li>
+                        <li class="page-item" *ngIf="nextState"><a class="page-link" (click)="goToNextPage()">Next</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

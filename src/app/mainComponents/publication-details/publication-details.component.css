@@ -1,0 +1,55 @@
+
+.container{
+    padding: 50px 0;
+  }
+  
+  
+  .header_bookdetails_container
+  {
+    background-image: url(../../../assets/photo/header1.jpg);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .current_page
+  {
+      font-size: 30px;
+      font-weight: bold;
+      color: #000;
+      line-height: 0.75;
+  }
+  
+  
+  .badge-info{
+    margin: 2%;
+  }
+  .download {
+    background-color: rgb(204, 19, 19);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: .9;
+      margin: 0!important;
+      vertical-align: top;
+      cursor: pointer;
+      border-radius: 5px;
+      vertical-align: middle;
+  }
+  
+  img{  
+    padding-right: 20px;
+    opacity: 1;
+    /* max-width: 200px;
+    max-height: 200px; */
+  
+  
+  }
+  
+  .back-button {
+    background-color: #2e75b6;
+    color: #e7e6e6;
+    display:inline-block;
+    margin-right: 10px;
+  }

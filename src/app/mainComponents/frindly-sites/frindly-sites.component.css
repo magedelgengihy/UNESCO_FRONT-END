@@ -1,0 +1,64 @@
+
+.container{
+  padding: 50px 0;
+}
+
+
+.header_FrindlySites_container
+{
+  background-image: url(../../../assets/photo/header1.jpg);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.current_page
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    line-height: 0.75;
+}
+
+.table{
+  color: #000;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  /* direction: rtl; */
+
+}
+table,th{
+    /* direction: rtl; */
+    text-align:left; 
+}
+
+table{
+ margin-top: 20px;  
+}
+table th{
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+
+}
+
+.card .card-img-top{
+  height: auto;
+  border: 1px solid #000;
+
+}
+
+.flash-site{
+  width: 500px;
+  height: 400px;
+  padding-top: 20px;
+
+}
+
+a {
+font-size: 12px;
+text-decoration: underline;
+font-weight: bold;
+}

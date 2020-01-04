@@ -1,0 +1,70 @@
+/* 
+  .container{
+    padding: 50px 0;
+  } */
+   
+.body_container
+  {
+    background-color: #ccc;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+
+.bg-form{
+  background-color: #f3f7f9 ;
+  border-style: solid;
+  border-color: #003679;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.alert-danger{
+  font-size: 12px;
+    padding: 6px;
+}
+.p-5{
+  padding: 20px 45px !important;
+}
+
+.spc{
+  padding-top: 50px;
+}
+.spc1{
+  padding-top: 10px;
+}
+
+.rw{
+  width: 250px;
+}
+
+@media (max-width:575px) {
+  .p-5{
+    padding: 10px 25px !important;
+  }
+}
+
+
+input[type=text].invalid-textbox,input[type=password].invalid-textbox{
+  border: 2px solid #ed5558;
+}
+
+
+label.validation-message{
+  color:#ed5558;
+}
+
+
+/* .alert {
+  padding: 20px;
+  background-color: #f44336; 
+  color: white;
+  margin-bottom: 15px;
+} */
+
+.success{
+  padding: 20px;
+  background-color:#249424; /* Green */
+  color: white;
+  margin-bottom: 15px;
+}

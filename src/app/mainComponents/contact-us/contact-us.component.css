@@ -1,0 +1,33 @@
+@import "../../../assets/assetsAhmedFathi/css/main.css"; 
+@import "../../../assets/assetsAhmedFathi/css/util.css";
+@import "../../../assets/assetsAhmedFathi/icons/Linearicons/icon-font.min.css";
+
+
+ 
+  .container{
+    padding: 50px 0;
+  }
+  
+  
+  .header_contact_container
+  {
+    background-image: url(../../../assets/photo/header1.jpg);
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+  .current_page
+  {
+      font-size: 30px;
+      color: #000;
+      line-height: 0.75;
+      padding-left: 100px;
+  }
+
+
+
+
+
+
+
+

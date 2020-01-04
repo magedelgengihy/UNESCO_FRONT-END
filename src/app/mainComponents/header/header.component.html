@@ -1,0 +1,51 @@
+<div class="section section-header">
+  <div class="container">
+    <div class="row">
+      <!------------------------------- Left ------------------------------->
+      <div class="col-md-8 col-sm-6 col-xs-12 title">
+        <div class="header-images">
+          <img src="assets/photo/EGYPT1.png" alt="logo">
+          <img src="assets/photo/UNSECO1.png" alt="logo">
+        </div>
+        <div class="header-paragraph">
+          <p id="logo-title-head" translate="">Egyptian National Commission</p>
+          <p id="logo-title" translate="">For Education Culture and Science</p>
+        </div>
+      </div>
+      <!------------------------------- Right ------------------------------->
+      <div class="col-md-4 ">
+        <div class="row">
+          <div class="col-6"></div>
+          <div class="col-6">
+            <div class="lang">
+              <a class="eng" (click)="switchLanguage('en')">English </a>
+              &nbsp; &nbsp; &nbsp;
+              <a class="arb" (click)="switchLanguage('ar')">العربية</a>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding-bottom: 25px;"></div>
+        <div class="log">
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-8">
+              <!-- Delete Me -->
+              <a *ngIf="!isUser" routerLink="register" class="b-size btn btn-light btn-sm" style="margin-left: 62px"
+                [innerHTML]="'Sign up' | translate"></a>
+              <p *ngIf="isUser"
+                style="font-size:15px; color:white;font-weight: bold; margin-top: 13px; margin-left: 50px"> Hello
+                {{fullName}} </p>
+
+              <a *ngIf="isUser" (click)="logout()" class="b-size btn btn-light btn-sm" style="margin-left: 62px"
+                [innerHTML]="'Log Out' | translate"></a>
+              <a *ngIf="!isUser" routerLink="login" class="b-size btn btn-light btn-sm" style="margin-left: 62px"
+                [innerHTML]="'Sign In' | translate"></a>
+              <!-- Delete Me -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

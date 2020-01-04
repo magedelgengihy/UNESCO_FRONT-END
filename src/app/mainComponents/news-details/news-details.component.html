@@ -1,0 +1,47 @@
+
+<!--news-details-component-->
+<div class="header_newsdetails_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="home_content ">
+                        <div class="current_page"><span translate>News Details</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="container rounded-lg" style=" margin-top: 50px;">
+            <div class="row">
+                <div class="col-12">
+                <!--Title of the Post-->
+                <h3 class="alert alert-primary" style="text-align:justify; ">
+                    {{ newsNameEn }}
+                </h3>
+                <hr>
+                <!--Date for adding post & name of the relative department-->
+                <blockquote class="blockquote">
+                    <footer class="date blockquote-footer">{{newsDate}}</footer>
+                    <button type="button" class="btn btn-primary float-right" style="margin-top: 0;" routerLink='/home'  (click)="clearLocalStorage()" translate>Back</button>
+                </blockquote>
+                <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <div class="d-flex justify-content-center ">
+                            <img class=" mx-auto d-block rounded-lg" src="http://localhost:3000/photos/{{newsImage}}" />
+                        </div>
+                        <br>
+                        {{ newsLongDisc }}
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 30px;"></div>
+        </div>
+        <!-- <div class="" style="margin-top:0px">
+            
+        </div> -->
+    

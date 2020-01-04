@@ -1,0 +1,70 @@
+
+<!--publication-details-component-->
+<div class="header_bookdetails_container">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="home_content ">
+                    <div class="current_page"><span translate>Publication Details</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container rounded-lg" style=" margin-top: 20px;">
+    <div class="row">
+        <div class="col-12">
+            <!--Title of the Post-->
+            <h3 class="alert alert-primary" style="text-align:justify; color:#0275D1">
+                {{publicationNameEn}}
+            </h3>
+            <hr>
+            <!--Date for adding post & name of the relative department-->
+            <blockquote class="blockquote">
+                <footer class="blockquote-footer">{{publicationDate}} </footer>
+
+            </blockquote>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3" style="margin-top: 20px;">
+            <div>
+                <div class="d-flex  ">
+                    <img class="ui rounded image mw-100" src="http://localhost:3000/photos/{{publicationImage}}">
+                </div>
+            </div>
+            <!-- books download-->
+            <div class="btn-group" role="group" style="margin-top:20px;">
+                <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle download mw-100"
+                    data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span translate>Download</span>
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" target="_blank" rel="noopener noreferrer"
+                        *ngFor="let publicationDocument of publicationDocuments"
+                        href="http://localhost:3000/documents/{{publicationDocument}}"
+                        translate>{{publicationDocument}}</a>
+                </div>
+            </div>
+        </div>
+        <!-- description -->
+        <div class="col-sm-9">
+            <p style="text-align: justify; margin-top: 20px">
+                {{publicationLongDisc}}
+            </p>
+        </div>
+    </div>
+    <br>
+    <div class="float-right">
+        <button type="button" class="btn btn-primary float-left" routerLink='/publications'
+            (click)="clearLocalStorage()" translate>Back</button>
+    </div>
+
+
+</div>
+
+<br>
+<br>

@@ -1,0 +1,147 @@
+
+
+<div class="body_container">
+  <div class="container spc">
+    <div class="row justify-content-center">
+      <form [formGroup]="signUpForm" (ngSubmit)=" onSubmit(signUpForm)" class="text-center bg-form p-5">
+        <p class="h4 mb-4" translate>Sign up</p>
+        <div class="form-row mb-4">
+          <div class="form-group col-md-6">
+            <!-- First name -->
+            <input type="text" name="firstName" required id="firstName" class="form-control" formControlName="firstName"
+              placeholder="{{'First Name*' | translate}}"
+              [ngClass]="{'invalid-textbox' :submitted && f.firstName.errors }">
+            <div *ngIf="submitted">
+              <label *ngIf="!f.firstName.dirty" class="validation-message alert alert-danger" translate>This field is
+                required.</label>
+            </div>
+          </div>
+
+          <div class="form-group col-md-6">
+            <!-- Last name -->
+            <input type="text" name="lastName" required id="defaultRegisterFormLastName" class="form-control"
+              formControlName="lastName" placeholder="{{'Last Name*' | translate}}"
+              [ngClass]="{'invalid-textbox' :submitted && f.lastName.errors }">
+            <div *ngIf="submitted">
+              <label *ngIf="!f.lastName.dirty" class="validation-message alert alert-danger" translate>This field is
+                required.</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- E-mail -->
+        <div class="form-group ">
+          <input type="text" name="email" placeholder="{{'E-mail*' | translate}}" required [pattern]="emailRegex"
+            class="form-control" formControlName="email" [ngClass]="{'invalid-textbox' :submitted && f.email.errors }"
+            email id="defaultRegisterFormEmail" class="form-control mb-4">
+          <div *ngIf="submitted">
+            <label *ngIf="!f.email.required && !f.email.dirty" class="validation-message alert alert-danger"
+              translate>This field is
+              required.</label>
+            <label *ngIf="f.email.invalid && f.email.errors.email "
+              class="validation-message alert alert-danger">Invalid email address.</label>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <input type="password" name="password" placeholder="{{'Password*' | translate}}" minlength="8" required
+            id="defaultRegisterFormPassword" class="form-control" formControlName="password"
+            [ngClass]="{'invalid-textbox' : submitted && f.password.errors }"
+            aria-describedby="defaultRegisterFormPasswordHelpBlock" style="margin-bottom: 15px">
+          <div *ngIf="submitted">
+            <label *ngIf="!f.password.required && !f.password.dirty" class="validation-message alert alert-danger"
+              translate>This field is required.</label>
+            <label *ngIf="f.password.invalid && f.password.errors.minlength "
+              class="validation-message alert alert-danger">Enter at least 8 characters.</label>
+          </div>
+        </div>
+
+        <!-- Phone number -->
+        <div class="form-group">
+          <input type="text" name="phone" id="defaultRegisterPhonePassword" class="form-control" formControlName="phone"
+            placeholder="{{'Phone Number' | translate}}"
+            [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phone.valid }"
+            aria-describedby="defaultRegisterFormPhoneHelpBlock" style="margin-bottom: 15px">
+          <div *ngIf="signUpForm.submitted && !phone.valid" class="alert alert-danger" translate>
+            <label class="validation-message">This field is required.</label>
+          </div>
+          <small class="form-text text-muted mb-4" translate>Optional</small>
+        </div>
+
+        <!--job-->
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="job" placeholder="{{'job' | translate}}"
+            [ngClass]="{'invalid-textbox' :signUpForm.submitted && !job.valid }">
+          <small class="form-text text-muted mb-4" translate>Optional</small>
+        </div>
+
+        <!--gender-->
+        <!-- <select class="form-control" #gender="ngModel" [(ngModel)]="userService.selectedUser.gender" 
+        name="gender" [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }"> 
+          <option value="" disabled selected translate>Gender...</option>
+          <option translate>Male</option>
+          <option translate>Female</option>
+        </select> -->
+
+        <!--birthDate-->
+        <div class="form-group">
+          <input type="date" formControlName="birthDate" name="birthDate" class="form-control"
+            placeholder="{{'birthDate' | translate}}"
+            [ngClass]="{'invalid-textbox' :signUpForm.submitted && !birthDate.valid }">
+          <small class="form-text text-muted mb-4" translate>Optional</small>
+        </div>
+
+        <!--Address-->
+        <div class="my-3 p-3 bg-white rounded shadow-sm">
+          <h6 class="border-bottom border-gray pb-2 mb-0 text-left" translate>Address</h6>
+          <div class="form-row spc1" formGroupName="address">
+            <div class="form-group" col-md-6>
+              <select class="form-control" formControlName="country">
+                <option value="" disabled selected translate>Country...</option>
+                <option>Egypt</option>
+              </select>
+            </div>
+            <div class="form-group" col-md-6>
+              <select class="form-control" name="city" formControlName="city"
+                [ngClass]="{'invalid-textbox' :signUpForm.submitted && !city.valid }">
+                <option value="" disabled selected translate>City...</option>
+                <option>Cairo</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <small class="form-text text-muted mb-4" translate>Optional</small>
+
+
+        <!--submit Button-->
+        <input class="btn btn-info my-4 btn-block" type="submit" value="Sign Up" >
+
+        <hr>
+        <!-- Terms of service -->
+        <p>
+          <em translate>Have Account</em>
+          <a routerLink="/login" translate> Sign In</a>
+
+          <!-- Success message -->
+          <div class="alert alert-success" *ngIf="showSucessMessage">
+            <strong>Success!</strong> Saved successfully
+          </div>
+
+          <!-- Verification message -->
+          <div class="alert alert-primary" *ngIf="verificationMessage && !signUpForm.touched && !signUpForm.dirty">
+            <strong>Please Verify your Email!</strong>
+          </div>
+
+          <!-- Error message -->
+          <div class="alert alert-danger" *ngIf="serverErrorMessages">
+            <h5> <strong> {{serverErrorMessages}}, Please Enter Another Email </strong> </h5>
+          </div>
+
+      </form>
+
+      <!-- Default form register -->
+    </div>
+  </div>
+  <div class="spc"></div>
+</div>

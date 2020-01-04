@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~@angular/material/prebuilt-themes/deeppurple-amber.css"; */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* @import "~@angular/material/prebuilt-themes/pink-bluegrey.css"; */
+/* @import "~@angular/material/prebuilt-themes/purple-green.css"; */
+
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("./assets/font/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Bold;
+  src: url("./assets/font/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Medium;
+  src:url("./assets/font/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: Tajawal;
+  src: url("./assets/font/Tajawal-Regular.ttf");
+}
+
+
+
+/* scrolltop ****/
+.scrollTop{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #003679;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}

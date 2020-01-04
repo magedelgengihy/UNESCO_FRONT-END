@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("../../../assets/font/Raleway-Regular.ttf");
+  }
+  
+.navbar-nav li a{
+    font-family: Raleway-Regular;
+    font-size: 14px;
+    font-weight: 0;
+}
+
+.navbar.navbar-dark .breadcrumb .nav-item.active>.nav-link, .navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
+    background-color: #2e75b6;
+    color: white;
+    
+}
+
+.navbar.navbar-dark .breadcrumb .nav-item .nav-link, .navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover{
+    background-color: #2e75b6;
+    color: white;
+}
+
+.navbar.navbar-dark .breadcrumb .nav-item .nav-link, .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+    color:black;
+   
+}
+.secondary-color {
+    background-color: #f3f7f9!important;
+}
+.md-form input:not([type]), .md-form input[type=date]:not(.browser-default), .md-form input[type=datetime-local]:not(.browser-default), .md-form input[type=datetime]:not(.browser-default), .md-form input[type=email]:not(.browser-default), .md-form input[type=number]:not(.browser-default), .md-form input[type=password]:not(.browser-default), .md-form input[type=search-md], .md-form input[type=search]:not(.browser-default), .md-form input[type=tel]:not(.browser-default), .md-form input[type=text]:not(.browser-default), .md-form input[type=time]:not(.browser-default), .md-form input[type=url]:not(.browser-default), .md-form textarea.md-textarea {
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none;
+    border-top-color: initial;
+    border-top-style: none;
+    border-top-width: initial;
+    border-right-color: initial;
+    border-right-style: none;
+    border-right-width: initial;
+    border-bottom-color: #212121;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: initial;
+    border-left-style: none;
+    border-left-width: initial;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-bottom: 1px solid #ced4da;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(206, 212, 218);
+    border-radius: 0;
+    outline: 0;
+    outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition-property: border-color, box-shadow;
+    transition-duration: 0.15s, 0.15s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s;
+}
+::placeholder{
+    color: #000000;
+}
+:-ms-input-placeholder{
+    color: #000000;
+}
+::-ms-input-placeholder{
+    color: #000000;
+}
+ul{
+    max-height: 100%;
+}
+.dropdown-item:hover{
+    background-color: #2e75b6;
+    color: white;
+}
+
+.secondary-color {
+    padding: 0 !important;
+}
+
+
+.container1{
+    margin-left: 70px;
+}
+.mr-auto, .mx-auto {
+    margin-right: 10%!important;
+    height: 70px;
+
+}
+.navbar {
+    font-weight: 500;
+    height: 60px;
+}
+.navbar-collapse {
+    
+    height: 100%;
+   
+}
+.nav-link{
+    color: black;
+    font-family: Raleway-Regular;
+    margin-right: 12px;
+    padding-top: 22px;
+    height: 100%;
+}

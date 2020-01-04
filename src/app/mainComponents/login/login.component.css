@@ -1,0 +1,49 @@
+.body_container
+  {
+    background-color: #ccc;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+.bg-form{
+  background-color: #f3f7f9 ;
+  border-style: solid;
+  border-color: #003679;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.p.solid {border-style: solid;}
+
+.alert-danger{
+  font-size: 12px;
+    padding: 6px;
+}
+.p-5{
+  padding: 20px 45px !important;
+}
+
+.spc{
+  padding-top: 50px;
+}
+
+.rw{
+  width: 300px;
+}
+
+@media (max-width:575px) {
+  .p-5{
+    padding: 10px 25px !important;
+  }
+}
+
+
+input[type=text].invalid-textbox,input[type=password].invalid-textbox{
+  border: 2px solid #ed5558;
+}
+
+
+label.validation-message{
+  color:#ed5558;
+}
+

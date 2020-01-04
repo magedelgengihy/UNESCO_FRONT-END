@@ -1,0 +1,98 @@
+
+  .container{
+    padding: 50px 0;
+  }
+  .Section-Structure{
+    padding: 50px;
+    border-color: #000;
+  }
+  
+  .header_section-organization
+  {
+    background-image: url(../../../assets/photo/header1.jpg);
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+  .current_page
+  {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    line-height: 0.75;
+  }
+  .list-color{
+    font-weight: bold;
+    text-align-last: center;
+    line-height:60px;
+    z-index: 2;
+    color: #000;
+    background-color: #ccc;
+    border: 1px solid #000;
+  }
+ .box-1{
+  width: 200px;
+  height: 60px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 55px;
+  text-align-last: center;
+  color: #000;
+  background-color: #ccc;
+  border: 1px solid #000;
+  margin-left: 50px;
+ }
+ .box-2{
+  width: 200px;
+  height: 60px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 55px;
+  text-align-last: center;
+  color: #000;
+  background-color: #ccc;
+  border: 1px solid #000;
+  margin-left: 50px;
+ }
+ .box-3{
+  width: 200px;
+  height: 60px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 55px;
+  text-align-last: center;
+  color: #000;
+  background-color: #ccc;
+  border: 1px solid #000;
+  margin-left: 50px;
+ }
+ .box-4{
+  width: 200px;
+  height: 60px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 55px;
+  text-align-last: center;
+  color: #000;
+  background-color: #ccc;
+  border: 1px solid #000;
+  margin-left: 50px;
+ }
+
+#line1 {
+  font-size:0;
+  width:1px;
+  height:20px;
+  color:#fff;
+  background-color:#000;
+  margin:auto;
+} 
+#line2 {
+  font-size:0;
+  width:800px;
+  height:1px;
+  color:#fff;
+  background-color:#000;    
+  margin:auto;
+} 
+ 

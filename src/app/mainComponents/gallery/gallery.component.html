@@ -1,0 +1,61 @@
+
+<!------------------------Header Gallery----------------------------->
+<div class="header_gallery_container">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="home_content ">
+                    <div class="current_page"><span translate>Gallery</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------Content Gallery----------------------------->
+<div class="container">
+    <div class="row">
+        <!-----------------------------------------side bar------------------------------------->
+        <div class="col-md-3 list-group" id="leftCol">
+            <div class="list-group" id="sidebar" [ngClass]="classes">
+                <button class="list-group-item list-group-item-action active list-color ">
+                    <span translate>Committee Departments</span>
+                </button>
+                <button class="list-group-item list-group-item-action" *ngFor="let deptData of deptData;"
+                    (click)="getImagesByDeptID(deptData._id)" (click)="putDeptNameInTitle(deptData.nameEn)">
+                    <span translate>{{deptData.nameEn}}</span></button>
+            </div>
+        </div>
+        <!------------------------------------images--------------------------------------->
+        <div class="col-md-9">
+            <h4>
+                <div class="alert alert-primary list-color" role="alert">
+                    <span translate>{{titleOfAlbums}}</span>
+                </div>
+            </h4>
+
+            <div class="row">
+                <div class="col-md-4" style="margin-bottom: 20px;" *ngFor="let image of images">
+                    <div class="card hovereffect">
+                        <a target="_blank" rel="noopener noreferrer" href="http://localhost:3000/photos/{{image}}">
+                            <img class="card-img-top" src="http://localhost:3000/photos/{{image}}" alt="Card image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger col-md-12 align-self-center" role="alert" *ngIf="errorMsg">
+                <h3 class="col-12" style="text-align: center">{{errorMsg}}</h3>
+            </div>
+            <br>
+            <br>
+            <!----------------------------------Pagination------------------------------------------>
+            <div class="container">
+                <ul class="pagination  justify-content-center" style="margin:20px 0">
+                    <li class="page-item" *ngIf="previousState"><a class="page-link"
+                            (click)="goToPreviousPage()">Previous</a></li>
+                    <li class="page-item" active><a class="page-link" >{{page}} / {{numOfPages}}</a></li>
+                    <li class="page-item" *ngIf="nextState"><a class="page-link" (click)="goToNextPage()">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

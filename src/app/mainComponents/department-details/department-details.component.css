@@ -1,0 +1,64 @@
+
+.container{
+    padding: 50px 0;
+  }
+  
+  
+  .header_Committee_container
+  {
+    background-image: url(../../../assets/photo/header1.jpg);
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+  .current_page
+  {
+      font-size: 30px;
+      font-weight: bold;
+      color: #000;
+      line-height: 0.75;
+  }
+  
+  
+  .admin-option{
+    color: red;
+  }
+  .pointer {cursor: pointer;}
+  
+  #title {
+    color: 0;
+   /* color: red */
+  }
+  
+  #news{
+    background-color: grey;
+  }
+  #sidebar{
+    padding: 0;
+  }
+  .mat-expansion-panel-body {
+    padding: 0 0 !important;
+  }
+  .mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 0;
+  }
+  .mat-expansion-panel-body {
+    padding: 0 !important;
+  
+  }
+  
+  .my-class{
+    width: 250px!important;
+    text-align:left;
+    
+  }
+
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+  }

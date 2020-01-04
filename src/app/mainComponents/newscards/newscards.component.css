@@ -1,0 +1,108 @@
+
+.sections{
+  padding: 25px 0;
+}
+
+.news{
+  background: #dedede;
+}
+
+.img-resp{
+  max-height: 470px;
+  
+  max-width: 254px;
+}
+.head-title{
+  font-size:40px;
+  text-align: center;
+
+}
+a,p,h4,small{
+  color:#000;
+}
+
+.card-hover:hover{
+  background-color:#2e75b6;
+  color:white;
+}
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    color:#fff;
+  }
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.8s cubic-bezier(0.88,-0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+  }
+  .hovereffect:hover img {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+.section-header .section-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.section-header .line{
+    width: 170px;
+    background: #7d7d7d;
+    height: 2px;
+    margin: auto;
+}
+.section-header .line span{
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #003679;
+    margin: auto;
+    position: relative;
+    bottom: 1px;
+}
+
+.card .card-body:hover .card-title  , 
+.card .card-body:hover .card-text{
+  background-color:#2e75b6;
+  color:white;
+}
+
+.card-body:hover a.btn{
+  background-color: #e7e6e6;
+  color: #000;
+}
+
+.a  .btn:hover{
+  background: #ccc;
+  color: #000;
+}
+.card{
+  max-height: 470px;
+}
+
+.list-color{
+  z-index: 2;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.list-group-item:hover{
+  background-color: #ccc;
+  color:#000;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}

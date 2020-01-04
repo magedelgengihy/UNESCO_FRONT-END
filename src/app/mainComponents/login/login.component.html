@@ -1,0 +1,59 @@
+<div class="body_container">
+  <div class="container spc">
+    <div class="row justify-content-center">
+      <!-- Default form login -->
+      <form #signInForm="ngForm" (ngSubmit)="signInForm.valid && login(signInForm)" class="text-center  bg-form p-5">
+
+        <p class="h4 mb-4" [innerHTML]="'Sign In' | translate"></p>
+
+        <!-- Email -->
+        <input type="text" name="email" #email="ngModel" [(ngModel)]="model.email"
+          placeholder="{{'E-mail' | translate}}" [pattern]="emailRegex" required
+          [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }" id="defaultLoginFormEmail"
+          class="form-control mb-4 rw">
+        <div *ngIf="signInForm.submitted && email.errors" class="alert alert-danger" translate>
+          <label *ngIf="email.errors.required" class="validation-message">This field is required.</label>
+          <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+        </div>
+        
+        <!-- Password -->
+        <input type="password" name="password" #password="ngModel" [(ngModel)]="model.password"
+          placeholder="{{'Password' | translate}}" required minlength="8"
+          [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }" class="form-control mb-4">
+        <div *ngIf="signInForm.submitted && password.errors" class="alert alert-danger" translate>
+          <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+          <label *ngIf="password.errors.minlength" class="validation-message">Enter at least 8 characters.</label>
+        </div>
+       
+
+        <div class="d-flex justify-content-around">
+          <div>
+            <!-- Forgot password -->
+            <a routerLink="/Forgot-Password" translate>Forgot password?</a>
+          </div>
+        </div>
+        <!-- Sign in button -->
+        <input type="submit" value="Sign In" class="btn btn-info btn-block my-4">
+
+       
+        <div>
+          <span [innerHTML]="'Not a member? ' | translate"></span>
+          <a routerLink="/register" translate>Register</a>
+        </div>
+
+        <!--Verification Message if not Verified-->
+        <div class="alert alert-primary" *ngIf="verificationMessage && !signInForm.touched && !signInForm.dirty">
+          <strong>Please Verify your Email!</strong>
+          <br>
+        </div>
+
+        <!-- Error message -->
+        <div class="alert alert-danger" *ngIf="serverErrorMessages && !showErrorMessage">
+          <h5> <strong> {{serverErrorMessages}} </strong> </h5>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <div class="spc"></div>
+</div>

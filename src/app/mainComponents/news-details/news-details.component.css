@@ -1,0 +1,75 @@
+
+.container{
+  padding: 50px 0;
+}
+
+
+.header_newsdetails_container
+{
+  background-image: url(../../../assets/photo/header1.jpg);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.current_page
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    line-height: 0.75;
+}
+
+.badge-info{
+  margin: 2%;
+  background-color: #2e75b6;
+  color: #e7e6e6;
+}
+
+
+.heading{
+  font-size : 30px ;
+  font-weight : 500 ;
+  color : #000000;
+  text-align:justify; 
+  background-color: #e7e6e6;
+  padding: 15px;
+}
+
+.description{
+  font-size : 16px ;
+  font-weight : 400 ;
+  color : #262626;
+}
+
+.card-header{
+  background-color: #e7e6e6;
+  font-size : 16px ;
+  font-weight : 400 ;
+  color : #262626;
+  margin: 0%;
+}
+
+
+.card-body {
+  color : #003679;
+  font-size : 16px ;
+  font-weight : 400 ;
+}
+
+.back-button {
+   background-color: #2e75b6;
+   color: #e7e6e6;
+   display:inline-block;
+   margin-right: 10px;
+}
+.date {
+  display:inline-block;
+  font-size : 14px ;
+  font-weight : 400 ;
+}
+
+img{
+max-width: 500px ;
+max-height: 400px;
+border: 1px solid #000;
+}
