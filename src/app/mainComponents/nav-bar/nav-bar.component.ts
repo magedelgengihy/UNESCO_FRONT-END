@@ -72,6 +72,7 @@ export class NavBarComponent implements OnInit {
     localStorage.removeItem('newsDocuments');
   }
 
+  
 
 }
 

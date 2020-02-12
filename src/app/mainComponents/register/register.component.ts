@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms'
 import { Validators } from '@angular/forms';
+import { CountryService } from 'src/app/services/country.service';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,9 @@ export class RegisterComponent implements OnInit {
   showSucessMessage: boolean;
   serverErrorMessages: string;
   verificationMessage: boolean = false;
-  constructor(public userService: UserService) { }
+  countries;
+
+  constructor(public userService: UserService, public countryService: CountryService) { }
 
 
   signUpForm = new FormGroup({
@@ -38,13 +41,31 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
 
+    this.countryService.getAllCountries().subscribe(
+      (res) => {
+        //this.countries = res;
+        console.log(res);
+        let resSTR = JSON.stringify(res);
+        let resJSON = JSON.parse(resSTR);
+        this.countries = resJSON;
+
+      },
+      (err) => {
+        console.log(err);
+
+      }
+    );
+
+    this.selectedCountryName = "";
+
+
   }
 
   submitted = false;
   onSubmit(form: NgForm) {
     this.submitted = true;
 
-    if(this.signUpForm.invalid){
+    if (this.signUpForm.invalid) {
       return;
     }
 
@@ -64,16 +85,17 @@ export class RegisterComponent implements OnInit {
 
     this.userService.postUser(filteredFormObj).subscribe(
       res => {
-        console.log(res);
+        
         this.showSucessMessage = true;
         setTimeout(() => this.showSucessMessage = false, 4000);
         this.signUpForm.reset();
         this.resetForm(form);
         this.verificationMessage = true;
         setTimeout(() => this.showSucessMessage = false, 600000);
-        this.submitted= false;
+        this.submitted = false;
       },
       err => {
+        console.log(err);
         if (err.status === 422) {
           this.serverErrorMessages = err.error.message;
           console.log(err.error.message);
@@ -105,6 +127,21 @@ export class RegisterComponent implements OnInit {
     //this.firstName 
     //form.resetForm();
     this.serverErrorMessages = '';
+    this.selectedCountryName = "";
+  }
+
+
+  selectedCountryName;
+  selectedCountry;
+  states;
+
+
+  getStates() {
+    this.selectedCountry = this.countries.find(({ name }) => name === this.selectedCountryName);
+    let resSTR = JSON.stringify(this.selectedCountry);
+    let resJSON = JSON.parse(resSTR);
+    this.states = resJSON.states;
+
   }
 
 

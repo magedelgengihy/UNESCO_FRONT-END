@@ -1,0 +1,25 @@
+
+
+.nav .navlink {
+
+    color: black;
+}
+
+.active{
+    color: white !important;
+    background-color: cadetblue;
+}
+
+.nav li a{
+    color: #222226;
+}
+
+.nav li a:hover{
+    color: white !important;
+    background-color: lightblue;
+}
+
+
+
+
+

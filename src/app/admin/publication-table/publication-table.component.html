@@ -1,0 +1,37 @@
+
+
+ <div class="table-responsive">
+    <table class="table table-hover table-sm mt-4">
+      <thead class="text-light bg-cadet-blue">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Date </th>
+        
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doc of data">
+          <th scope="row">{{ doc._id}}</th>
+          <td>{{ doc.nameEn }}</td>
+          <td>{{doc.date | date }}</td>
+         
+          <td>
+            <a [routerLink]="['/admin/publications', doc._id]">
+              <i class="material-icons edit-icon">create</i>
+            </a>
+          </td>
+          <td>
+            <span (click)="deleteRecord(doc._id)">
+              <i class="material-icons delete-icon">
+                delete
+              </i>
+            </span>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

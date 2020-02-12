@@ -16,12 +16,17 @@ import {ChangePasswordComponent} from './mainComponents/change-password/change-p
 import { PublicationsComponent } from './mainComponents/publications/publications.component';
 import { PublicationDetailsComponent } from './mainComponents/publication-details/publication-details.component';
 import { DepartmentDetailsComponent } from './mainComponents/department-details/department-details.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 
 
 
 const routes: Routes = [
+  { 
+    path: 'admin',  canActivate: [AuthGuard],
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) 
+  },
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'Forgot-Password', component: ForgetPasswordComponent},

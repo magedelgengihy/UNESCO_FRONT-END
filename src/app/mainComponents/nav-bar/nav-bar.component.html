@@ -41,7 +41,7 @@
         <a class="nav-link" routerLink="contact-us" routerLinkActive="active" translate>Contact Us</a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" *ngIf="isAdmin" (click)="clearLocalStorage()">
-        <a class="nav-link" routerLink="#" routerLinkActive="active" translate>Admin Panel</a>
+        <a class="nav-link" routerLinkActivate="active" routerLink="admin" translate>Admin Panel</a>
       </li>
     </ul>
 

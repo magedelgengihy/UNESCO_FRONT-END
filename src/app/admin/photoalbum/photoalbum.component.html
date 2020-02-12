@@ -1,0 +1,89 @@
+<p>
+    {{photoalbum |json}}
+</p>
+
+<div class="my-spinner" *ngIf="showSpinner" style="position: absolute; top:45%;left: 45%;">
+    <div class="spinner-border text-info" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<form #fUpdate (ngSubmit)="updateSubmit(fUpdate)">
+    <div class="row">
+        <div class="col-md-6">
+            <fieldset class="">
+                <legend class="">English Fields</legend>
+
+                <div class="form-group">
+                    <label for="nameEn">Name</label>
+                    <input type="text" class="form-control" id="nameEn" placeholder="Example input name of album"
+                        name="nameEn" [ngModel]="photoalbum.nameEn"
+                        (change)="updatePhotoalbum('nameEn', $event.target.value)">
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionEn">Description</label>
+                    <input type="text" class="form-control" id="descriptionEn" placeholder="Enter decription in English"
+                        name="descriptionEn" [ngModel]="photoalbum.descriptionEn"
+                        (change)="updatePhotoalbum('descriptionEn', $event.target.value)">
+                </div>
+
+            </fieldset>
+
+        </div>
+        <div class="col-md-6 text-right" style="direction: rtl;">
+            <fieldset class="">
+                <legend class="">الحقول باللغة العربية</legend>
+
+                <div class="form-group">
+                    <label for="nameAr">الاسم</label>
+                    <input type="text" class="form-control" id="nameAr" placeholder=" من فضلك ادخل اسم الالبوم"
+                        name="nameAr" [ngModel]="photoalbum.nameAr"
+                        (change)="updatePhotoalbum('nameAr', $event.target.value)">
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionAr">الوصف</label>
+                    <input type="text" class="form-control" id="descriptionAr" placeholder="من فضلك ادخل وصف الالبوم"
+                        name="descriptionAr" [ngModel]="photoalbum.descriptionAr"
+                        (change)="updatePhotoalbum('descriptionAr', $event.target.value)">
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="department">Department</label>
+        <select class="form-control" id="department" name="departmentId" [ngModel]="photoalbum.departmentId"
+            (change)="updatePhotoalbum('departmentId', $event.target.value)">
+            <option *ngFor="let dep of departments" [value]="dep._id">
+                {{dep.nameEn}}
+            </option>
+        </select>
+    </div>
+
+    <div class="files-container">
+        <div class="row">
+
+            <div class="file-container col-4" *ngFor="let img of photoalbum.images">
+                <button type="button" class="btn btn-light" style="position: absolute;top:0px;z-index: 10;" (click)="removeImage(img)">
+                    x</button>
+                <div class="clearfix"></div>
+
+                <div class="card card-body ">
+
+                    <img height="auto" width="100%" [src]="'http://localhost:3000'+photoalbum.URL+'/'+img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" multiple id="customFile" name="images" (change)="addImages($event.target.files)">
+        <label class="custom-file-label" for="customFile">Add Image</label>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>

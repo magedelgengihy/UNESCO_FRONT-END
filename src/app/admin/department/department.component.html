@@ -1,0 +1,100 @@
+<div>
+
+</div>
+
+<form #fUpdate=ngForm (ngSubmit)="updateSubmit(fUpdate)">
+    <fieldset class="pt-4">
+        <legend>Department</legend>
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset class="">
+                    <legend class="">English Fields</legend>
+
+                    <div class="form-group">
+                        <label for="nameEn">Name</label>
+                        <input type="text" class="form-control" id="nameEn" placeholder="Example input name of album" name="nameEn" [(ngModel)]="department.nameEn" (change)="updateDepartment('nameEn',$event.target.value)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descriptionEn">Description</label>
+                        <input type="text" class="form-control" id="descriptionEn"
+                            placeholder="enter decription in English" name="descriptionEn" [(ngModel)]="department.descriptionEn">
+                    </div>
+
+                </fieldset>
+
+            </div>
+            <div class="col-md-6 text-right" style="direction: rtl;">
+                <fieldset class="">
+                    <legend class="">الحقول باللغة العربية</legend>
+
+                    <div class="form-group">
+                        <label for="nameAr">الاسم</label>
+                        <input type="text" class="form-control" id="nameAr" placeholder="ادخل اسم القسم" name="nameAr" [(ngModel)]="department.nameAr">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descriptionAr">الوصف</label>
+                        <input type="text" class="form-control" id="descriptionAr" placeholder="ادخل وصف القسم" name="descriptionAr" [(ngModel)]="department.descriptionAr">
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <fieldset class="border p-2">
+        <legend class="width-auto">Supdepartments </legend>
+        <div *ngFor="let subdep of subdepartments">
+            <div>
+                <button type="button" class="float-right btn btn-light" title="remove" (click)="removeSubdep(subdep)">
+                    x
+                </button>
+            </div>
+            <div class="clearfix"></div>
+            <div style="display: inline-block; width: 50%;">
+                <p>name: {{ subdep.nameEn}}</p>
+                <p>description: {{subdep.descriptionEn}}</p>
+            </div>
+            <div style="display: inline-block;direction: rtl;width: 50%;" class="text-right">
+                <p>الاسم: {{ subdep.nameAr}}</p>
+                <p>الوصف: {{subdep.descriptionAr}}</p>
+            </div>
+            <hr>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Field / Language</th>
+                    <th scope="col">English</th>
+                    <th scope="col">العربية</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">name</th>
+                    <td>
+                        <input type="text" style="border: none;" placeholder="name" class="table-input" (change)="setNameEn($event)">
+                    </td>
+                    <td><input type="text" style="border: none;direction: rtl;" placeholder="الاسم" class="table-input"(change)="setNameAr($event)"></td>
+                </tr>
+                <tr>
+                    <th scope="row">description</th>
+                    <td>
+                        <input type="text" style="border: none;" placeholder="name" class="table-input"(change)="setDescriptionEn($event)">
+                    </td>
+                    <td>
+                        <input type="text" style="border: none;direction: rtl;" placeholder="الوصف" class="table-input"(change)="setDescriptionAr($event)">
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-light" (click)="addSubdepartment($event)"> Add </button>
+    </fieldset>
+
+
+
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>

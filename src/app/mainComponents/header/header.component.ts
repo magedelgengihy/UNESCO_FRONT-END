@@ -20,7 +20,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private navBarComponent: NavBarComponent,
     private translate: TranslateService,
-    public userService: UserService) {
+    public userService: UserService,
+    private router: Router) {
     translate.setDefaultLang('en');
 
   }
@@ -53,5 +54,7 @@ export class HeaderComponent implements OnInit {
     this.userService.deleteUserFromLocalStorage();
     this.isUser = false;
     this.navBarComponent.ngDoCheck();
+    this.router.navigateByUrl('/home');
+
   }
 }

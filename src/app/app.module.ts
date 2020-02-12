@@ -1,5 +1,4 @@
 ///////////////////// Built-in Imports //////////////////////////////
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,9 +16,14 @@ import {
 } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MatButtonModule, MatExpansionModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { from } from 'rxjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  ToastrModule,
+} from 'ngx-toastr';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 ///////////////////// Components Imports ////////////////////////////
 import { AppComponent } from './app.component';
@@ -50,7 +54,7 @@ import { PublicationsService } from './services/publications.service';
 import { PublicationsComponent } from './mainComponents/publications/publications.component';
 import { PublicationDetailsComponent } from './mainComponents/publication-details/publication-details.component';
 import { UserService } from './services/user.service';
-
+import { CountryService } from './services/country.service';
 
 ////////////// Others Imports ////////////////////////
 import { AuthGuard } from './auth/auth.guard';
@@ -124,11 +128,14 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot() // ToastrModule added,
   ],
   providers: [
     ///////////////////// Services ///////////////////////
     ContactUsService,
+    CountryService,
     DepartmentsService,
     PhotoAlbumsService,
     PublicationsService,

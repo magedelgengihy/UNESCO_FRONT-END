@@ -1,0 +1,63 @@
+<div>
+
+</div>
+
+<form #fCreate (ngSubmit)="createSubmit(fCreate)">
+    <div class="row">
+        <div class="col-md-6">
+            <fieldset class="">
+                <legend class="">English Fields</legend>
+
+                <div class="form-group">
+                    <label for="nameEn">Name</label>
+                    <input type="text" class="form-control" id="nameEn" placeholder="Example input name of album"
+                        name="nameEn" ngModel>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionEn">Description</label>
+                    <input type="text" class="form-control" id="descriptionEn"
+                        placeholder="Enter decription in English" name="descriptionEn" ngModel>
+                </div>
+
+            </fieldset>
+
+        </div>
+        <div class="col-md-6 text-right" style="direction: rtl;">
+            <fieldset class="">
+                <legend class="">الحقول باللغة العربية</legend>
+
+                <div class="form-group">
+                    <label for="nameAr">الاسم</label>
+                    <input type="text" class="form-control" id="nameAr" placeholder=" من فضلك ادخل اسم الالبوم" name="nameAr" ngModel>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionAr">الوصف</label>
+                    <input type="text" class="form-control" id="descriptionAr" placeholder="من فضلك ادخل وصف الالبوم" name="descriptionAr"ngModel>
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="department">Department</label>
+        <select class="form-control" id="department" name="departmentId" ngModel>
+            <option *ngFor="let dep of departments" [value]="dep._id">
+                {{dep.nameEn}}
+            </option>
+        </select>
+    </div>
+
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" multiple id="customFile" name="images" ngModel>
+        <label class="custom-file-label" for="customFile">Choose file</label>
+    </div>
+
+    <!-- <div class="border " style="padding: 0;">
+        <label class="border-right bg-light" style="width: 20%;height: 100%;;padding: 10px;margin: 0;">Select Files<input type="file" hidden>
+        </label>
+        <input readonly type="text" style="width:80%;height: 100%;border: none;padding: 10px;">  
+    </div> -->
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>

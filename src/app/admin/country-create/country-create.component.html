@@ -1,0 +1,34 @@
+<form #fCreate="ngForm" (ngSubmit)="createSubmit(fCreate)">
+
+    <div class="form-group">
+      <label for="country-name">Country</label>
+      <input ngModel type="text" name="name" class="form-control" id="country-name" placeholder="Enter country name">
+    </div>
+
+
+    <div class="form-group">
+      <label for="country-iso">ISO </label>
+      <input ngModel type="text" class="form-control" id="country-iso" placeholder="Enter ISO of country" name="iso">
+      <small class="text tex-muted"> country ISO name</small>
+    </div>
+
+
+    <fieldset class="border p-2">
+
+      <legend class="w-auto">Add Cities</legend>
+      <div class="form-group">
+        <!-- <label for="cities-list">Cities Entered</label> -->
+        <small class="from-text text-muted"> please enter comma separated list of cities</small>
+        <textarea (change)="onWriting(textarea, fCreate)" #textarea class="form-control" id="cities-list" rows="3"
+          placeholder="example CityA, CityB, ...."></textarea>
+      </div>
+
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary mt-2 ">Submit</button>
+
+  </form>
+
+  <div>
+    {{ fCreate.value | json}}
+  </div>

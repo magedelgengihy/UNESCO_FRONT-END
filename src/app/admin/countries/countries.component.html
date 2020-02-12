@@ -1,0 +1,59 @@
+<p class="mt-4"></p>
+<h4 class="d-inline ">Country /</h4>
+<!----------------------------------->
+
+<a (click)="toggle(toggle1,toggle2)" class="menu-button dropdown-toggle">
+  {{ menuText}}
+</a>
+
+<div #toggle1 style="transition: max-height 2s;overflow: hidden" [style.maxHeight]="maxHeightCreate">
+
+  <div class="card card-body mt-4">
+    <!--------------------  create form  -------------------->
+    <app-country-create></app-country-create>
+  </div>
+
+</div>
+<div id="toggle2" #toggle2 style="transition: max-height 2s" [style.maxHeight]="maxHeightView"
+  [style.overflow]="overFlowView">
+
+  <div>
+    <div *ngIf="showSpinner" class="spinner-border text-info" role="status"
+      style="position: absolute;top:35%;z-index: 100;left: 45%;">
+      <span class="sr-only">Loading...</span>
+    </div>
+
+
+    <app-country-table [data]="data" (deleteRecord)="deleteRecord($event)">
+    </app-country-table>
+
+
+    <div class="paginator">
+      <button (click)="onPrevious()" class="btn btn-light btn-sm" [disabled]="!previousState">
+        <i class="material-icons">
+          arrow_back_ios
+        </i>
+      </button>
+
+      <span>
+        &nbsp; &nbsp;
+        {{ page }}/{{ numberOfPages}}
+        &nbsp; &nbsp;
+      </span>
+
+      <button (click)="onNext()" class="btn btn-light btn-sm" [disabled]="!nextState">
+        <i class="material-icons">
+          arrow_forward_ios
+        </i>
+      </button>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+<div style="height: 100px;">
+</div>

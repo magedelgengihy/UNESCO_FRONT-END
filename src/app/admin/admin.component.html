@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row mt-0">
+        <div class="col-lg-3 mt-0 bg-light">
+
+            <p class=" d-block d-lg-none mb-0">
+                <a class="d-block menu-button dropdown-toggle" data-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Category 
+                </a>
+            </p>
+            <div class="collapse mt-0" id="collapseExample">
+                <div class="card menu">
+
+                    <ul class="nav flex-column ">
+                        <li class="nav-item">
+                            <a class="nav-link " routerLink="users" routerLinkActive="active">users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="news" routerLinkActive="active">news</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="photoalbums" routerLinkActive="active">photoalbums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " routerLink="publications" routerLinkActive="active">publications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " routerLink="departments" routerLinkActive="active">departments</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " routerLink="countries" routerLinkActive="active">Countries</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class=" d-none d-lg-block mt-5">
+                <ul class="nav flex-column ">
+                    <li class="nav-item">
+                        <a class="nav-link " routerLink="users" routerLinkActive="active">users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="news" routerLinkActive="active">news</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="photoalbums" routerLinkActive="active">photoalbums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " routerLink="publications" routerLinkActive="active">publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " routerLink="departments" routerLinkActive="active">departments</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " routerLink="countries" routerLinkActive="active">Countries</a>
+                    </li>
+                </ul>
+            </div>
+            
+
+        </div>
+
+        <div class="col-lg-9  mt-2">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+
+/*-----------------------menu -----------------*/
+.menu-button{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    /* background-color: #0275d8; */
+    color: grey;
+    /* border-bottom: 2px solid grey; */
+}
+.menu-button:hover{
+text-decoration: none;
+}
+
+/*---------------------paginator---------------------*/
+.paginator{
+    text-align: center;
+}
+
+.paginator button{
+    border: none;
+}
+
+/*--------------------icons--------------------------*/
+.delete-icon:hover{
+    cursor: pointer;
+    color: red;
+}
+.edit-icon{
+    cursor: pointer;
+    color: yellowgreen;
+}
+
+.delete-icon{
+    cursor: pointer;
+    color: cadetblue;
+}
+.edit-icon:hover{
+    cursor: pointer;
+    color: cadetblue !important;
+}
+
+/*---------------------colors------------------*/
+.text-light-blue{
+
+    color: lightblue;
+}
+
+.text-cadet-blue{
+
+    color: cadetblue;
+}
+
+.bg-light-blue{
+
+    background-color: lightblue !important;
+}
+
+.bg-cadet-blue{
+    background-color: cadetblue !important;
+}
